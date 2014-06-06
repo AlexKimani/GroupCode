@@ -1,0 +1,348 @@
+<htmlform><div class="ke-form-header">
+    <style type="text/css">
+        table.tb {
+            background-color: #B3C2F0;
+            border: 1px solid black;
+        }
+
+        table.tb1 {
+            border: 1px solid black;
+            vertical-align: baseline;
+            text-align: left;
+            background-color: #E1E1FF;
+        }
+
+        table.tb1 tr th, table.tb1 tr td {
+            border: 0;
+            padding: 10px;
+        }
+    </style>
+
+    <table width="100%">
+        <tr>
+            <td>Date: <encounterDate id="encounter-date" showTime="true" /></td>
+            <td>Location: <encounterLocation default="GlobalProperty:kenyaemr.defaultLocation" type="autocomplete" /></td>
+        </tr>
+    </table>
+</div>
+
+<div class="ke-form-content">
+    <table width="100%" border="0" class="tb" cellspacing="10">
+        <tr>
+           <td><h2>Voluntary Medical Male Circumcision Client Form</h2></td>
+        </tr>
+        <tr>
+            <td>F3: Facility Name</td>
+            <!--<td><obs conceptID="" rows="2" cols="80"/></td>-->
+        </tr>
+    </table>
+    MEDICAL HISTORY AND PHYSICAL EXAMINATION
+    <table>
+        <tr>
+            <td>
+    <fieldset>
+        <legend>B1 : KNOWLEDGE OF HIV STATUS</legend>
+        <table width="100%" border="0" class="tb" cellspacing="10">
+            <tr>
+                <td>(1) Was client counselled at this facility today?</td>
+                <td><obs conceptId="1914AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+            </tr>
+            <tr>
+                <td>(2) Was  client tested for HIV at this facility?</td>
+                <td><obs conceptId="119481AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+            </tr>
+            <tr>
+                <td>(3) If Yes, what is the result?</td>
+                <td><obs conceptId="159427AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+            </tr>
+            <tr>
+                <td>(3) If No, what is the client's self-reported HIV status?</td>
+                <td><obs conceptId="159427AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+            </tr>
+            <tr>
+                <td>(3) Was partner tested for HIV at this facility today?</td>
+                <td><obs conceptId="161557AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+            </tr>
+            <tr>
+                <td>(3) If Yes, what is the result?</td>
+                <td><obs conceptId="159427AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+            </tr>
+
+        </table>
+    </fieldset>
+            </td>
+            <td>
+    <fieldset>
+        <legend>B1 :CLIENT'S KNOWN HISTORY OF HISTORY</legend>
+        <table width="100%" border="0" class="tb" cellspacing="10">
+            <tr>
+                <td>(1) Haemophilia or bleeding disorder?</td>
+                <td><obs conceptId="119481AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+            </tr>
+            <tr>
+                <td>(2) Diabetes</td>
+                <td><obs conceptId="119481AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+            </tr>
+        </table>
+    </fieldset>
+            </td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+        <td>
+    <fieldset>
+        <legend>B3: CLIENT PRESENTING WITH</legend>
+        <table width="100%" border="0" class="tb" cellspacing="10">
+            <tr>
+                <td>(1) Urethral discharge</td>
+                <td><obs conceptId="119481AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+            </tr>
+            <tr>
+                <td>(2) Genital sore</td>
+                <td><obs conceptId="119481AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+            </tr>
+            <tr>
+                <td>(3) Pain on urination</td>
+                <td><obs conceptId="119481AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+            </tr>
+            <tr>
+                <td>(4) Swelling of the scrotum</td>
+                <td><obs conceptId="119481AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+            </tr>
+            <tr>
+                <td>(5) Difficulty in retracting foreskin</td>
+                <td><obs conceptId="119481AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+            </tr>
+            <tr>
+                <td>((6) Difficulty in returning foreskin to normal</td>
+                <td><obs conceptId="119481AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+            </tr>
+            <tr>
+                <td>(7) Concerns about erection / sexual function</td>
+                <td><obs conceptId="119481AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+            </tr>
+            <tr>
+                <td>(8) Other, please specify</td>
+                <td><obs conceptId="159683AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+            </tr>
+        </table>
+    </fieldset>
+        </td>
+        <td>
+    <fieldset>
+        <legend>B4: Client undergoing treatment of</legend>
+        <table width="100%" border="0" class="tb" cellspacing="10">
+            <tr>
+                <td>(1) Anaemia </td>
+                <td><obs conceptId="119481AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+            </tr>
+            <tr>
+                <td>(2) Diabetes</td>
+                <td><obs conceptId="119481AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+            </tr>
+            <tr>
+                <td>(3) HIV/AIDS</td>
+                <td><obs conceptId="119481AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+            </tr>
+            <tr>
+                <td>(4) Other, please specify</td>
+                <td><obs conceptId="159683AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+            </tr>
+
+        </table>
+    </fieldset>
+        </td>
+        </tr>
+    </table>
+    <table>
+    <fieldset>
+        <legend>B5: Allergies</legend>
+        <table width="100%" border="0" class="tb" cellspacing="10">
+            <tr>
+                <td>(1): Any known allergies?</td>
+                <td><obs conceptId="119481AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+            </tr>
+            <tr>
+                <td>(2) If Yes, please specify</td>
+                <td><obs conceptId="159683AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+            </tr>
+        </table>
+    </fieldset>
+
+    <fieldset>
+        <legend>B6: Surgical operation</legend>
+        <table width="100%" border="0" class="tb" cellspacing="10">
+            <tr>
+                <td>(1) Client ever had a surgical operation? </td>
+                <td><obs conceptId="119481AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+            </tr>
+            <tr>
+                <td>(2) If Yes, any complications</td>
+                <td><obs conceptId="159683AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+            </tr>
+            <tr>
+                <td>(3) Other</td>
+                <td><obs conceptId="159683AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+            </tr>
+        </table>
+    </fieldset>
+    </table>
+    <table>
+        <tr>
+            <td>
+    <fieldset>
+        <legend>B7: BP:</legend>
+        <table width="100%" border="0" class="tb" cellspacing="10">
+            <tr>
+                <td>Pulse: </td>
+                <td><obs conceptId="5087AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+            </tr>
+            <tr>
+                <td>Weight</td>
+                <td><obs conceptId="5089AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+            </tr>
+        </table>
+    </fieldset>
+            </td>
+            <td>
+    <fieldset>
+        <legend>C: ELIGIBILITY FOR CIRCUMCISION</legend>
+        <table width="100%" border="0" class="tb" cellspacing="10">
+            <tr>
+                <td>C1: Client in good general health?  </td>
+                <td><obs conceptId="119481AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+            </tr>
+            <tr>
+                <td>C2: Client has been counselled about MC?</td>
+                <td><obs conceptId="119481AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+            </tr>
+            <tr>
+                <td>C3: Client has provided informed consent/assent for MC? </td>
+                <td><obs conceptId="119481AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+            </tr>
+            <tr>
+                <td>C4: Client eligible for circumcision? </td>
+                <td><obs conceptId="119481AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+            </tr>
+            <tr>
+                <td>If No for any of the above, explain</td>
+                <td><obs conceptId="159683AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+            </tr>
+
+        </table>
+    </fieldset>
+            </td>
+        </tr>
+    </table>
+    NOTE: PROCEED WITH CIRCUMCISION ONLY IF ALL BOXES HAVE BEEN CHECKED “YES”
+    <table>
+        <tr>
+            <td>
+    <fieldset>
+        <legend>D: CIRCUMCISION PROCEDURE</legend>
+        <table width="100%" border="0" class="tb" cellspacing="10">
+            <tr>
+                <td>D1: Date of circumcision</td>
+                <td><obs conceptId="5087AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+            </tr>
+            <tr>
+                <td>D2: Start Time</td>
+                <td><obs conceptId="1521AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+            </tr>
+            <tr>
+                <td>D3: End Time</td>
+                <td><obs conceptId="1522AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+            </tr>
+        </table>
+    </fieldset>
+            </td>
+            <td>
+    <fieldset>
+        <legend>E: CIRCUMCISION FOLLOW-UP # 1</legend>
+        <table width="100%" border="0" class="tb" cellspacing="10">
+            <tr>
+                <td>E1: Date of visit</td>
+                <td><obs conceptId="5096AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+            </tr>
+            <tr>
+                <td>E2: Type of visit</td>
+                <td><obs conceptId="160530AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+            </tr>
+            <tr>
+                <td>E3: Are there symptoms of an Adverse Event?</td>
+                <td><obs conceptId="1729AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+            </tr>
+            <tr>
+                <td>E4: If Yes, how would you rate it? (mild/moderate/severe)</td>
+            <tr>
+                <td>E5: Recommendations/ Treatment/ Comments::</td>
+                <td><obs conceptId="161011AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+            </tr>
+            </tr>
+        </table>
+    </fieldset>
+            </td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td>
+    <fieldset>
+        <legend>E: CIRCUMCISION FOLLOW-UP # 2</legend>
+        <table width="100%" border="0" class="tb" cellspacing="10">
+            <tr>
+                <td>E1: Date of visit</td>
+                <td><obs conceptId="5096AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+            </tr>
+            <tr>
+                <td>E2: Type of visit</td>
+                <td><obs conceptId="160530AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+            </tr>
+            <tr>
+                <td>E3: Are there symptoms of an Adverse Event?</td>
+                <td><obs conceptId="1729AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+            </tr>
+            <tr>
+                <td>E4: If Yes, how would you rate it? (mild/moderate/severe)</td>
+            <tr>
+                <td>E5: Recommendations/ Treatment/ Comments::</td>
+                <td><obs conceptId="161011AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+            </tr>
+            </tr>
+        </table>
+    </fieldset>
+            </td>
+            <td>
+    <fieldset>
+        <legend>E: CIRCUMCISION FOLLOW-UP # 3</legend>
+        <table width="100%" border="0" class="tb" cellspacing="10">
+            <tr>
+                <td>E1: Date of visit</td>
+                <td><obs conceptId="5096AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+            </tr>
+            <tr>
+                <td>E2: Type of visit</td>
+                <td><obs conceptId="160530AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+            </tr>
+            <tr>
+                <td>E3: Are there symptoms of an Adverse Event?</td>
+                <td><obs conceptId="1729AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+            </tr>
+            <tr>
+                <td>E4: If Yes, how would you rate it? (mild/moderate/severe)</td>
+            <tr>
+                <td>E5: Recommendations/ Treatment/ Comments::</td>
+                <td><obs conceptId="161011AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /></td>
+            </tr>
+            </tr>
+        </table>
+    </fieldset>
+            </td>
+        </tr>
+    </table>
+    </div>
+    <div class="ke-form-footer">
+        <submit />
+    </div>
+</htmlform>

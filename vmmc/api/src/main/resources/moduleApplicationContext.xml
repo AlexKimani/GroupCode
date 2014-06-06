@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+  		    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+  		    http://www.springframework.org/schema/context
+  		    http://www.springframework.org/schema/context/spring-context-3.0.xsd
+  		    http://www.springframework.org/schema/jee
+  		    http://www.springframework.org/schema/jee/spring-jee-3.0.xsd
+  		    http://www.springframework.org/schema/tx
+  		    http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+  		    http://www.springframework.org/schema/aop
+  		    http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+  		    http://www.springframework.org/schema/util
+  		    http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+
+	<!-- Add here beans related to the API context -->
+
+    <!--Reports-->
+    <bean id="vmmc.common.report.bootcamp1" class="org.openmrs.module.kenyacore.report.CalculationReportDescriptor">
+        <property name="targetUuid" value="4410441e-dab5-45b7-be22-90a8fccce214" />
+        <property name="name" value="BootCamp Test" />
+        <property name="description" value="Monthly ART Drug Report" />
+        <property name="calculation" value="org.openmrs.module.vmmc.calculation.EligibleForExampleProgramCalculation" />
+        <property name="displayIdentifier" ref="kenyaemr.hiv.identifier.upn"/>
+        <property name="apps"><set><ref bean="kenyaemr.app.reports" /></set></property>
+        <!--<property name="dhistemplate" value="kenyaemr:dhis.xml"/>-->
+    </bean>
+
+    <bean id="vmmc.common.report1.clinical" class="org.openmrs.module.kenyacore.report.CalculationReportDescriptor">
+        <property name="targetUuid" value="f2b7736e-8092-42ce-b843-78981b8ca953" />
+        <property name="name" value="Clinical Encounter" />
+        <property name="description" value="Monthly Encounter Report" />
+        <property name="calculation" value="org.openmrs.module.vmmc.calculation.ReportCalculation" />
+        <property name="apps"><set><ref bean="kenyaemr.app.reports" /></set></property>
+        <!--<property name="dhistemplate" value="kenyaemr:dhis.xml"/>-->
+    </bean>
+    <bean id="vmmc.common.report" class="org.openmrs.module.kenyacore.report.ReportConfiguration">
+        <property name="programReports" >
+            <map>
+                <entry key-ref="kenyaemr.program.mchms">
+                    <set>
+                        <ref bean="vmmc.common.report.bootcamp1"/>
+                    </set>
+                </entry>
+
+
+            </map>
+        </property>
+
+    </bean>
+    <bean id="vmmc.common.report1" class="org.openmrs.module.kenyacore.report.ReportConfiguration">
+        <property name="programReports">
+            <map>
+                <entry key-ref="kenyaemr.program.mchms">
+                    <set>
+                        <ref bean="vmmc.common.report1.clinical"/>
+                    </set>
+                </entry>
+            </map>
+        </property>
+    </bean>
+
+
+
+    <!--Forms-->
+    <bean id="vmmc.form.circumcision" class="org.openmrs.module.kenyacore.form.FormDescriptor">
+        <property name="targetUuid" value="e3659cbd-102b-48c9-96a0-1c5744ecd3f2" />
+        <property name="apps">
+            <set>
+                <ref bean="kenyaemr.app.clinician" />
+                <!--<ref bean="kenyaemr.app.pages.controller.org.openmrs.module.kenyaemr.page.controller.chart" />-->
+            </set>
+        </property>
+        <property name="icon" value="vmmc:forms/example.png" />
+        <property name="htmlform" value="vmmc:enroll.html" />
+        <property name="gender" value="MALE" />
+    </bean>
+
+    <bean id="vmmc.form.circumcisionCompletion" class="org.openmrs.module.kenyacore.form.FormDescriptor">
+        <property name="targetUuid" value="3734dc52-eee0-4f1c-a15c-427397f4a65d" />
+        <property name="apps">
+            <set>
+                <ref bean="kenyaemr.app.clinician" />
+                <!--<ref bean="kenyaemr.app.pages.controller.org.openmrs.module.kenyaemr.page.controller.chart" />-->
+            </set>
+        </property>
+        <property name="icon" value="vmmc:forms/example.png" />
+        <property name="htmlform" value="vmmc:followUp/followUp.html" />
+        <property name="gender" value="MALE" />
+    </bean>
+
+    <bean id="vmmc.form.circumcisionEnrollment" class="org.openmrs.module.kenyacore.form.FormDescriptor">
+        <property name="targetUuid" value="217f6a14-345a-4490-a66e-ee9d4b3b8c3d" />
+        <property name="apps">
+            <set>
+                <ref bean="kenyaemr.app.clinician" />
+                <!--<ref bean="kenyaemr.app.pages.controller.org.openmrs.module.kenyaemr.page.controller.chart" />-->
+            </set>
+        </property>
+        <property name="icon" value="vmmc:forms/example.png" />
+        <property name="htmlform" value="vmmc:enroll/addPatient.html" />
+        <property name="gender" value="MALE" />
+    </bean>
+
+    <!--<bean id="vmmc.config.form" class="org.openmrs.module.kenyacore.form.FormConfiguration">-->
+    <!--&lt;!&ndash; Example of adding a form to the general visit form list &ndash;&gt;-->
+    <!--<property name="commonVisitForms">-->
+    <!--<set>-->
+    <!--<ref bean="vmmc.form.circumcision" />-->
+    <!--<ref bean="vmmc.form.circumcisionEnrollment" />-->
+    <!--<ref bean="vmmc.form.circumcisionCompletion" />-->
+    <!--</set>-->
+    <!--</property>-->
+    <!--</bean>-->
+
+    <!--Program-->
+    <bean id="vmmc.program.surgical" class="org.openmrs.module.kenyacore.program.ProgramDescriptor">
+        <property name="targetUuid" value="70e3f3fb-f45b-4a5d-b2db-8c7fe13812c3" />
+        <property name="eligibilityCalculation" value="org.openmrs.module.vmmc.calculation.library.EnrollCalculation" />
+        <property name="defaultEnrollmentForm" ref="vmmc.form.circumcisionEnrollment" />
+        <property name="defaultCompletionForm" ref="vmmc.form.circumcisionCompletion" />
+        <property name="patientForms">
+            <set>
+
+            </set>
+        </property>
+        <property name="visitForms">
+            <set>
+                <ref bean="vmmc.form.circumcision" />
+            </set>
+        </property>
+        <property name="fragments">
+            <map>
+                <entry key="enrollment-summary" value="vmmc:program/vmmc/surgicalEnrollmentSummary" />
+                <entry key="care-panel" value="vmmc:program/vmmc/vmmcCarePanel" />
+                <entry key="completion-summary" value="vmmc:program/vmmc/moduleCompletionSummary" />
+            </map>
+        </property>
+        <!--<property name="htmlform" value="vmmc:enroll/addPatient.html" />-->
+        <property name="order" value="1903" />
+    </bean>
+</beans>
