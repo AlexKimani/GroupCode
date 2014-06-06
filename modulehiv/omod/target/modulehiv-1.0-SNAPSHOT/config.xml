@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<module configVersion="1.2">
+
+	<!-- Module Properties -->
+	<id>modulehiv</id>
+	<name>HIV BOOTCAMP Module</name>
+	<version>1.0-SNAPSHOT</version>
+	<package>org.openmrs.module.modulehiv</package>
+	<author>GROUP ONE</author>
+	<description>
+		HIV forms for patient entry
+	</description>
+	<updateURL>https://modules.openmrs.org/modules/download/modulehiv/update.rdf</updateURL>
+	<require_version>1.9.7</require_version>
+	<!-- / Module Properties -->
+
+	
+	<!-- Module Activator -->
+	<activator>org.openmrs.module.modulehiv.HIVBOOTCAMPActivator</activator>
+
+    <require_modules>
+        <require_module version="14.2-SNAPSHOT">org.openmrs.module.kenyaemr</require_module>
+    </require_modules>
+	<!-- Maps hibernate file's, if present -->
+	<mappingFiles>
+				
+	</mappingFiles>
+
+	<!-- Internationalization -->
+	<!-- All message codes should start with modulehiv. -->
+	<messages>
+		<lang>en</lang>
+		<file>messages.properties</file>
+	</messages>
+	<messages>
+		<lang>fr</lang>
+		<file>messages_fr.properties</file>
+	</messages>
+	<messages>
+		<lang>es</lang>
+		<file>messages_es.properties</file>
+	</messages>
+	<!-- /Internationalization -->
+
+</module>
+

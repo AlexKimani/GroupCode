@@ -1,0 +1,17 @@
+<htmlform>
+    Date: <encounterDate default="today"/> <br/>
+    Location: <encounterLocation/> <br/>
+    Provider: <encounterProvider role="Provider"/> <br/>
+
+    <section headerLabel="2. Demographic Info">
+        <span>Nom du patient: <lookup expression="patient.personName"/></span>
+        <span>No. Dossier: <lookup complexExpression="#foreach( $patId in $patientIdentifiers.get("PIH ID") ) $\!patId #end"/></span><br/>
+        <span>Sexe: <lookup expression="patient.gender" codePrefix="gender_"/></span>
+        <span>(a) Date de naissance: <lookup expression="patient.birthdate"/></span>
+        <span>(b) Age: <lookup expression="patient.age"/></span>
+    </section>
+
+
+
+    <submit/>
+</htmlform>
