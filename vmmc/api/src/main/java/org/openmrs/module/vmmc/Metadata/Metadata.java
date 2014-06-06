@@ -14,5 +14,9 @@ public class Metadata {
         public static final String WIDOWED="1059AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
         public  static final String CIVIL_STATUS="1054AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
         public static  final String LIVES_ALONE="135704AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+        public static final String HIV_STATUS = "159427AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+        public static final String DATE_OF_HIV_DIAGNOSIS = "160554AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+        public static  final String POSITIVE = "703AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+        public static  final String NEGATIVE = "664AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
     }
 }
